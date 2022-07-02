@@ -1,0 +1,4 @@
+[ ] add tic tac toe
+[ ] optimise com win return
+[ ] optimise win check
+[?] change CellType to VictoryType
