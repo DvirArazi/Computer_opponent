@@ -27,4 +27,29 @@ static class Utils {
         Random rand = new Random();
         return rand.NextDouble() > 0.5 ? true : false;
     }
+
+    public static string getInput(string message ,(Func<string, bool> cond, string msg)[] errors) {
+        Console.Write(message + ": ");
+        while(true) {
+            var input = Console.ReadLine();
+            if (input == null) {
+                Console.Write("Input cannot be null: ");
+                continue;
+            }
+
+            var invalid = false;
+            while(true) {
+                foreach (var err in errors) {
+                    if (err.cond(input)) {
+                        Console.Write(err.msg + ": ");
+                        invalid = true;
+                        break;
+                    }
+                }
+                if (invalid) break;
+
+                return input;
+            }
+        }
+    }
 }

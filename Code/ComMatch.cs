@@ -88,7 +88,6 @@ class ComMatch {
 
                 int playerValue;
                 if (_game.CheckVictory() == OppType.Com) {
-                    _game.RevertMove();
                     playerValue = _comDepth + 1;
                 } else {
                     playerValue = playerOptionValue(0);
