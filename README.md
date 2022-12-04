@@ -3,7 +3,7 @@ A modular computer opponent program for 2-player board games.
 
 ## Running the project
 - Install [.NET 6.0](https://dotnet.microsoft.com/en-us/)
-- Clone this project, enter the cloned folder
+- Clone this project and enter the cloned folder
 - Run the project with `dotnet run`
 
 ## Adding support for additional games
