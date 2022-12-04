@@ -36,8 +36,8 @@
                 _ => Utils.RandBool()
             };
 
+            ComMatch game = new ComMatch(new TicTacToe(3, 3, 3), 3, isPlayerFirst);
             // ComMatch game = new ComMatch(new ConnectN(7, 6, 4), 3, isPlayerFirst);
-            ComMatch game = new ComMatch(new TicTacToe(3, 3, 3), 9, isPlayerFirst);
 
             game.Run();
 

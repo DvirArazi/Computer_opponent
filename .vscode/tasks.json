@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/FourInARow.csproj",
+                "${workspaceFolder}/ComOpp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/FourInARow.csproj",
+                "${workspaceFolder}/ComOpp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/FourInARow.csproj"
+                "${workspaceFolder}/ComOpp.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

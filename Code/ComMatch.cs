@@ -49,7 +49,11 @@ class ComMatch {
         return minValue;
     }
 
-    int comOptionValue(int depth) { 
+    int comOptionValue(int depth) {
+        if (_game.IsTie()) {
+            return _comDepth + 1;
+        }
+
         int maxValue = 0;
 
         for (int i = 0; i < _game.OptionsCount(); i++) {
@@ -58,7 +62,7 @@ class ComMatch {
 
                 if (_game.CheckVictory() == OppType.Com) {
                     _game.RevertMove();
-                    return _comDepth + 1;
+                    return _comDepth + 2;
                 }
 
                 int playerValue = playerOptionValue(depth + 1);
@@ -84,6 +88,7 @@ class ComMatch {
 
                 int playerValue;
                 if (_game.CheckVictory() == OppType.Com) {
+                    _game.RevertMove();
                     playerValue = _comDepth + 1;
                 } else {
                     playerValue = playerOptionValue(0);

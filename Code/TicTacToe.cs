@@ -18,7 +18,7 @@ class TicTacToe : IGame {
         int rtn;
 
         while (true) {
-            Console.Write("Please enter X and Y values seperated by a space: ");
+            Console.Write("Please enter X and Y values [1-3] seperated by a space: ");
             var input = Console.ReadLine();
 
             if (input == null) {
@@ -26,7 +26,7 @@ class TicTacToe : IGame {
                 continue;
             }
 
-            var parts = input.Split(' ');
+            var parts = input.TrimEnd().Split(' ');
 
             if (parts.Length != 2) {
                 Console.WriteLine("Make sure to input 2 integers.");
