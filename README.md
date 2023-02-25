@@ -1,4 +1,4 @@
-# Computer_opponent
+# Computer Opponent Program
 A modular computer opponent program for 2-player board games.
 
 ## Running the project
